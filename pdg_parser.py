@@ -23,6 +23,8 @@ def parse_prog(src_path, output):
     assert ret == 0
 
 def load_pdg(db, output):
+    # ret = subprocess.call(["joern-export", "--repr", "cfg", "--format", "dot", "-o", output, db])
+    # ret = subprocess.call(["joern-export", "--repr", "cdg", "--format", "dot", "-o", output, db])
     ret = subprocess.call(["joern-export", "--repr", "pdg", "--format", "dot", "-o", output, db])
     assert ret == 0
 
